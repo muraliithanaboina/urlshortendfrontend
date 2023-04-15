@@ -40,7 +40,7 @@ function LinkShortener() {
           value={originalUrl}
           onChange={(e) => setOriginalUrl(e.target.value)}
         />
-        <button  type="submit">Shorten</button>
+        <button   type="submit">Shorten</button>
       </form>
      
        {shortenedUrl && (

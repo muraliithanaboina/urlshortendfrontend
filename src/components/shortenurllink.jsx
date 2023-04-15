@@ -24,7 +24,7 @@ function ShortenedLink({ props }) {
       {originalUrl ? (
         <div>
           <p>You will be redirected to:</p>
-          <a href={originalUrl}>{originalUrl}</a>
+          <link href={originalUrl}>{originalUrl}</link>
         </div>
       ) : (
         <p>Loading...</p>
