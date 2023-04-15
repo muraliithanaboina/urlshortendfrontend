@@ -1,0 +1,21 @@
+
+.shortfrom{
+    background-color: rgb(243, 186, 116);
+    text-align: center;
+    height: 7cm;
+    padding: 100px;
+    margin: 100px;
+    align-items: center;
+    border: 100px;
+    border-radius: 50%;
+    
+    box-shadow:  2px 5px rgb(122, 117, 115);
+
+    
+}
+button{
+    
+    color: whitesmoke;
+    background-color: green;
+    
+}
