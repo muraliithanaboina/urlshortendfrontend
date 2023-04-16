@@ -20,23 +20,16 @@ function ShortenedLink({ props }) {
   }, [props]);
 
   const handleClick = () => {
+    console.log("murali")
  
-    axios({
-      method: 'get',
-      url: `${originalUrl}`,
-      withCredentials: false,
-     
-    });
+   axios.get(`${originalUrl}`,{ crossdomain: true });
   };
 
   return (
     <div>
       {originalUrl ? (
         <div>
-          <p>You will be redirected to:</p>
-         <a href={originalUrl} onClick={handleClick}>
-            {originalUrl}
-          </a>
+       <a href={props} onClick={handleClick}>{props}</a>
         </div>
       ) : (
         <p>Loading...</p>

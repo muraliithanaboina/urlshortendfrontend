@@ -45,11 +45,10 @@ function LinkShortener() {
      
        {shortenedUrl && (
         <div>
-          <p>Shortened URL:</p>
-          <a href={shortenedUrl}>
+         
           <ShortenedLink props={shortenedUrl}/>
-            {shortenedUrl}
-          </a>
+          
+         
         </div>
       )}
       
