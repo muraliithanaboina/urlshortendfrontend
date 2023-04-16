@@ -8,23 +8,35 @@ function ShortenedLink({ props }) {
   useEffect(() => {
     const fetchOriginalUrl = async () => {
       try {
-        const response = await axios.get(`http://localhost:8082/api/v1/${props}`);
-        setOriginalUrl(response.data.originalUrl);
+        const response = await axios.get(`http://localhost:8082/api/v1/${props}`,{ crossdomain: true });
+        console.log(response.data)
+        setOriginalUrl(response.data);
         setError('');
       } catch (err) {
         setError(err.response.data.message);
       }
     };
-
     fetchOriginalUrl();
   }, [props]);
+
+  const handleClick = () => {
+ 
+    axios({
+      method: 'get',
+      url: `${originalUrl}`,
+      withCredentials: false,
+     
+    });
+  };
 
   return (
     <div>
       {originalUrl ? (
         <div>
           <p>You will be redirected to:</p>
-          <link href={originalUrl}>{originalUrl}</link>
+         <a href={originalUrl} onClick={handleClick}>
+            {originalUrl}
+          </a>
         </div>
       ) : (
         <p>Loading...</p>
