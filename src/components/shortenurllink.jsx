@@ -20,9 +20,10 @@ function ShortenedLink({ props }) {
   }, [props]);
 
   const handleClick = () => {
-    console.log("murali")
- 
-   axios.get(`${originalUrl}`,{ crossdomain: true });
+    console.log(originalUrl)
+    window.open(originalUrl, '_blank');
+     
+
   };
 
   return (
